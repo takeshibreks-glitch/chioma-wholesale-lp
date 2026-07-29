@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHIOMA | 卸取引のご案内</title>
+  <meta name="description" content="CHIOMAは、マンツーマンサロンの会話から自然に紹介できる、体験用サンプルから始めるエキストラバージンオリーブオイルです。" />
+  <style>
+    :root {
+      --ink: #171713;
+      --muted: #6e675d;
+      --paper: #f8f4eb;
+      --white: #fffdf7;
+      --mist: #ebe7dc;
+      --blue: #0f6094;
+      --blue-dark: #073a5d;
+      --green: #435139;
+      --line: rgba(23, 23, 19, .13);
+      --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+      --sans: "Hiragino Sans", "Yu Gothic", "YuGothic", sans-serif;
+      --latin: Optima, "Avenir Next", serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      line-height: 1.95;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; width: 100%; }
+    a { color: inherit; }
+    h1, h2, h3, p, figure { margin: 0; }
+    h1, h2, h3, .lead { font-family: var(--serif); font-weight: 500; }
+    .wrap { width: min(1100px, calc(100% - 44px)); margin: 0 auto; }
+    .narrow { width: min(760px, calc(100% - 44px)); margin: 0 auto; }
+
+    .site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      padding: 28px 0;
+      color: rgba(255, 253, 247, .9);
+    }
+    .site-header .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .logo {
+      font-family: var(--latin);
+      letter-spacing: .44em;
+      font-size: 1.12rem;
+    }
+    .nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-size: .84rem;
+    }
+    .nav a { text-decoration: none; }
+    .nav .outline {
+      border: 1px solid rgba(255, 253, 247, .42);
+      border-radius: 999px;
+      padding: 8px 15px;
+      background: rgba(23, 23, 19, .18);
+    }
+
+    .hero {
+      min-height: 96svh;
+      position: relative;
+      display: grid;
+      align-items: end;
+      isolation: isolate;
+      overflow: hidden;
+      color: var(--white);
+      background: #182313;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(13, 18, 10, .12), rgba(13, 18, 10, .82)),
+        linear-gradient(90deg, rgba(13, 18, 10, .72), rgba(13, 18, 10, .24) 55%, rgba(13, 18, 10, .55)),
+        url("assets/grove.jpg") center / cover;
+      z-index: -2;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 24vh;
+      background: linear-gradient(180deg, transparent, var(--paper));
+      z-index: -1;
+    }
+    .hero-inner {
+      width: min(880px, calc(100% - 44px));
+      margin: 0 auto;
+      padding: 150px 0 92px;
+      text-align: center;
+    }
+    .eyebrow {
+      font-family: var(--latin);
+      text-transform: uppercase;
+      letter-spacing: .26em;
+      font-size: .76rem;
+      color: #b8d8ef;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(2.35rem, 6.2vw, 5.35rem);
+      line-height: 1.22;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+    .hero .sub {
+      width: min(650px, 100%);
+      margin: 28px auto 0;
+      color: rgba(255, 253, 247, .86);
+      font-size: 1.04rem;
+    }
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: var(--white);
+      color: var(--blue-dark);
+      text-decoration: none;
+      font-size: .94rem;
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.ghost {
+      background: rgba(255, 253, 247, .1);
+      color: var(--white);
+      border-color: rgba(255, 253, 247, .38);
+    }
+
+    .intro {
+      padding: 86px 0 70px;
+      text-align: center;
+      background: var(--paper);
+    }
+    .intro h2 {
+      font-size: clamp(1.8rem, 3.8vw, 3rem);
+      line-height: 1.48;
+      text-wrap: balance;
+    }
+    .intro p {
+      margin-top: 24px;
+      color: #403c34;
+    }
+
+    .full-image {
+      background: var(--paper);
+      padding: 0 0 90px;
+    }
+    .full-image figure {
+      width: min(980px, calc(100% - 44px));
+      margin: 0 auto;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+    }
+    .full-image img {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .rules {
+      background: var(--white);
+      padding: 96px 0 36px;
+    }
+    .rule {
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr);
+      gap: 42px;
+      padding: 0 0 76px;
+      margin-bottom: 76px;
+      border-bottom: 1px solid var(--line);
+    }
+    .rule:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+    .num {
+      position: sticky;
+      top: 24px;
+      align-self: start;
+      font-family: var(--latin);
+      font-size: clamp(4rem, 10vw, 7.5rem);
+      line-height: .84;
+      color: var(--blue);
+    }
+    .rule-body {
+      display: grid;
+      grid-template-columns: minmax(0, .98fr) minmax(300px, .86fr);
+      gap: 48px;
+      align-items: center;
+    }
+    .rule:nth-child(even) .rule-body figure { order: -1; }
+    .rule h3 {
+      font-size: clamp(1.65rem, 3.4vw, 2.7rem);
+      line-height: 1.45;
+      margin-bottom: 20px;
+      text-wrap: balance;
+    }
+    .rule .lead {
+      color: var(--blue-dark);
+      font-size: 1.13rem;
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+    .rule p {
+      color: #403c34;
+      font-size: .98rem;
+    }
+    .rule figure {
+      background: var(--mist);
+      overflow: hidden;
+    }
+    .rule img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+    .rule .wide img { aspect-ratio: 16 / 10; }
+
+    .offer {
+      padding: 92px 0;
+      background: var(--paper);
+    }
+    .offer-head {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 52px;
+      align-items: end;
+      margin-bottom: 44px;
+    }
+    .offer .eyebrow { color: var(--blue); }
+    .offer h2 {
+      font-size: clamp(1.75rem, 3.8vw, 3rem);
+      line-height: 1.45;
+    }
+    .offer-head p {
+      color: #403c34;
+    }
+    .offer-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+    .offer-item {
+      min-height: 178px;
+      padding: 24px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 253, 247, .58);
+    }
+    .offer-item strong {
+      display: block;
+      color: var(--blue-dark);
+      margin-bottom: 12px;
+      font-size: .94rem;
+    }
+    .offer-item p {
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.78;
+    }
+
+    .proof {
+      background: var(--white);
+      padding: 92px 0;
+      border-top: 1px solid var(--line);
+    }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 54px;
+      align-items: start;
+    }
+    .proof .eyebrow { color: var(--blue); }
+    .proof h2 {
+      font-size: clamp(1.75rem, 3.8vw, 3rem);
+      line-height: 1.45;
+      margin-bottom: 22px;
+    }
+    .proof-copy p {
+      color: #403c34;
+    }
+    .quote {
+      margin-top: 28px;
+      padding-left: 22px;
+      border-left: 3px solid #c9a24d;
+      color: var(--green);
+      font-family: var(--serif);
+      font-size: 1.12rem;
+      line-height: 1.8;
+    }
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .data-card {
+      min-height: 140px;
+      padding: 22px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+    .data-card strong {
+      display: block;
+      font-family: var(--latin);
+      letter-spacing: .14em;
+      color: var(--green);
+      font-size: .75rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .data-card span {
+      display: block;
+      font-family: var(--serif);
+      color: var(--blue-dark);
+      font-size: clamp(1.5rem, 3vw, 2.15rem);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .data-card p {
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.65;
+    }
+
+    .steps {
+      padding: 88px 0 96px;
+      background: var(--paper);
+    }
+    .steps h2 {
+      font-size: clamp(1.75rem, 3.8vw, 3rem);
+      line-height: 1.45;
+    }
+    .steps-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 38px;
+    }
+    .steps-head p {
+      width: min(430px, 100%);
+      color: #403c34;
+    }
+    .cycle {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      margin-bottom: 34px;
+    }
+    .cycle-item {
+      padding: 24px;
+      min-height: 150px;
+      background: rgba(255, 253, 247, .62);
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .cycle-item small {
+      display: block;
+      color: #b18e46;
+      font-family: var(--latin);
+      margin-bottom: 10px;
+    }
+    .cycle-item strong {
+      display: block;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 1.38rem;
+      margin-bottom: 8px;
+    }
+    .cycle-item p {
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.7;
+    }
+    .talk {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+    .talk-item {
+      background: var(--white);
+      padding: 24px;
+    }
+    .talk-item strong {
+      display: block;
+      color: var(--green);
+      font-size: .9rem;
+      margin-bottom: 12px;
+    }
+    .talk-item p {
+      color: #403c34;
+      font-size: .92rem;
+      line-height: 1.76;
+    }
+
+    .cta {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: var(--paper);
+      color: var(--ink);
+      padding: 0;
+    }
+    .cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(248, 244, 235, .98) 0%, rgba(248, 244, 235, .9) 50%, rgba(248, 244, 235, .34) 100%),
+        url("assets/action-pouch.jpg") right center / min(38vw, 420px) auto no-repeat;
+      z-index: -1;
+    }
+    .cta-inner {
+      padding: 112px 0;
+      width: min(660px, 100%);
+    }
+    .cta h2 {
+      font-size: clamp(1.8rem, 4vw, 3.15rem);
+      line-height: 1.45;
+      margin-bottom: 24px;
+    }
+    .cta p {
+      color: #403c34;
+    }
+    .cta .hero-actions { justify-content: flex-start; }
+    .cta .btn {
+      background: var(--blue-dark);
+      color: var(--white);
+    }
+
+    footer {
+      padding: 28px 0;
+      background: var(--ink);
+      color: rgba(255, 253, 247, .62);
+      font-size: .8rem;
+    }
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .nav a:not(.outline) { display: none; }
+      .hero-inner { padding-bottom: 82px; }
+      .rule {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .num {
+        position: static;
+        font-size: 4.4rem;
+      }
+      .rule-body,
+      .offer-head {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .rule:nth-child(even) .rule-body figure { order: 0; }
+      .offer-list { grid-template-columns: repeat(2, 1fr); }
+      .proof-grid,
+      .steps-head {
+        grid-template-columns: 1fr;
+        display: grid;
+        gap: 28px;
+      }
+      .cycle,
+      .talk { grid-template-columns: repeat(2, 1fr); }
+      .cta::before {
+        background-position: center, right bottom;
+        background-size: auto, 300px auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .wrap, .narrow, .hero-inner, .full-image figure {
+        width: min(100% - 32px, 1100px);
+      }
+      .site-header { padding: 22px 0; }
+      .logo { font-size: 1rem; }
+      .hero { min-height: auto; }
+      .hero-inner {
+        padding: 132px 0 72px;
+        text-align: left;
+      }
+      .hero-actions {
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+      .btn { width: 100%; }
+      .intro { text-align: left; padding-top: 68px; }
+      .full-image { padding-bottom: 64px; }
+      .rules { padding-top: 70px; }
+      .rule { padding-bottom: 58px; margin-bottom: 58px; }
+      .rule img, .rule .wide img { aspect-ratio: 4 / 5; }
+      .offer-list { grid-template-columns: 1fr; }
+      .data-grid,
+      .cycle,
+      .talk { grid-template-columns: 1fr; }
+      .cta-inner { padding: 86px 0; }
+      footer .wrap { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="logo">CHIOMA</div>
+      <nav class="nav" aria-label="ページ内ナビゲーション">
+        <a href="#reason">選ばれる理由</a>
+        <a href="#offer">始め方</a>
+        <a class="outline" href="#contact">サンプル請求</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">For One-on-One Salon Owners</p>
+      <h1>マンツーマンサロンの会話から、自然に選ばれる店販を。</h1>
+      <p class="sub">
+        売り込みは苦手。でも、お客様に本当に良いものは紹介したい。<br />
+        まずは体験用パウチから始められる、サロンのためのオリーブオイル。
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact">メールでサンプル請求する</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="intro">
+      <div class="narrow">
+        <p class="eyebrow">About CHIOMA</p>
+        <h2>ひとりで営むサロンだからこそ、売り込まずに伝わる店販を。</h2>
+        <p>
+          CHIOMAは、イタリア・プーリア州の単一品種コラティーナから生まれたエキストラバージンオリーブオイルです。29年お客様に向き合ってきた美容師が、自分の店でお客様に勧めたいものとして選びました。髪の話から、毎日の食や習慣の話へ。マンツーマンの時間の中で、自然に会話が生まれる店販です。
+        </p>
+      </div>
+    </section>
+
+    <section class="full-image" aria-label="CHIOMA商品写真">
+      <figure>
+        <img src="assets/bottles.png" alt="CHIOMAのボトルが並ぶ商品写真" />
+      </figure>
+    </section>
+
+    <section class="rules" id="reason">
+      <article class="rule wrap">
+        <div class="num">1</div>
+        <div class="rule-body">
+          <div>
+            <h3>売り込まなくても、会話に出せる。</h3>
+            <p class="lead">マンツーマンサロンの強みは、お客様との信頼関係です。</p>
+            <p>
+              CHIOMAは「毎日口にするものを選ぶ」という自然な話題から入りやすい商品です。施術中の何気ない会話、年齢や体調の変化、食の話。押し売りではなく、「よかったら味を試してみてください」と渡せるきっかけになります。
+            </p>
+          </div>
+          <figure>
+            <img src="assets/salon-conversation.png" alt="マンツーマンサロンで会話する美容師とお客様" />
+          </figure>
+        </div>
+      </article>
+
+      <article class="rule wrap">
+        <div class="num">2</div>
+        <div class="rule-body">
+          <div>
+            <h3>小さな棚でも、きちんと印象に残る。</h3>
+            <p class="lead">限られた店販スペースでも、青いラベルが静かに目を引きます。</p>
+            <p>
+              大きな店販棚を作らなくても大丈夫です。受付横や鏡前に置くだけで、パッケージから会話が始まる商品へ。日常使いにもギフトにも提案しやすく、サロンの雰囲気を崩さずに扱えます。
+            </p>
+          </div>
+          <figure class="wide">
+            <img src="assets/salon-bottles.png" alt="サロンの鏡前に並ぶCHIOMAのボトル" />
+          </figure>
+        </div>
+      </article>
+
+      <article class="rule wrap">
+        <div class="num">3</div>
+        <div class="rule-body">
+          <div>
+            <h3>「なぜすすめるのか」を説明できる。</h3>
+            <p class="lead">自分が納得していないものは、お客様にすすめにくい。</p>
+            <p>
+              力強い香り、青さ、余韻。味わいの特徴が明確だから、まず自分で試してから言葉にできます。分析データに基づく品質の根拠もあるため、「なんとなく良さそう」ではなく、納得して紹介しやすい一本です。
+            </p>
+          </div>
+          <figure>
+            <img src="assets/olive-fruit.jpg" alt="枝に実るコラティーナのオリーブ" />
+          </figure>
+        </div>
+      </article>
+
+      <article class="rule wrap">
+        <div class="num">4</div>
+        <div class="rule-body">
+          <div>
+            <h3>体験から、無理なく習慣へ。</h3>
+            <p class="lead">いきなり売るのではなく、まず味を知ってもらう。</p>
+            <p>
+              10mlパウチは、店販が苦手なオーナーでも渡しやすい体験用サンプルです。気に入った方には500mlボトルで習慣化していただく。食卓で使い切り、また買いに来る流れをつくることで、長く残る顧客接点を育てます。
+            </p>
+          </div>
+          <figure>
+            <img src="assets/daily-use.png" alt="CHIOMAを料理にかける日常の食卓シーン" />
+          </figure>
+        </div>
+      </article>
+
+      <article class="rule wrap">
+        <div class="num">5</div>
+        <div class="rule-body">
+          <div>
+            <h3>ひとりでも始めやすい材料まで。</h3>
+            <p class="lead">説明、声かけ、見せ方までまとめて使えます。</p>
+            <p>
+              商品説明、販売トーク、店頭POP、SNS用画像、体験用パウチの渡し方。忙しいマンツーマンサロンでも取り入れやすいように、店内で自然に選ばれる状態づくりまで一緒に整えていきます。
+            </p>
+          </div>
+          <figure>
+            <img src="assets/salon-chat.png" alt="サロンで自然に会話する美容師とお客様" />
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <section class="offer" id="offer">
+      <div class="offer-head wrap">
+        <div>
+          <p class="eyebrow">Offer</p>
+          <h2>店販が苦手でも、まずは「味見」から始められる。</h2>
+        </div>
+        <p>
+          10mlパウチで味わいを確認いただいたうえで、お客様への渡し方、店内での見せ方、予約販売の進め方まで、マンツーマンサロンの営業スタイルに合わせてご案内します。
+        </p>
+      </div>
+      <div class="offer-list wrap">
+        <div class="offer-item">
+          <strong>体験</strong>
+          <p>10mlパウチは、オーナー自身とお客様がまず味わいを知るための体験用サンプルです。</p>
+        </div>
+        <div class="offer-item">
+          <strong>導入</strong>
+          <p>サンプルで反応を見てから、500mlボトルの取り扱いを無理なくご相談いただけます。</p>
+        </div>
+        <div class="offer-item">
+          <strong>販促</strong>
+          <p>分析報告書、商品説明、店頭POP、SNS用画像セットを共有します。</p>
+        </div>
+        <div class="offer-item">
+          <strong>継続</strong>
+          <p>予約販売や追加発注まで、ひとりサロンでも在庫を抱えにくい流れを整えます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof" id="data">
+      <div class="proof-grid wrap">
+        <div class="proof-copy">
+          <p class="eyebrow">Story & Data</p>
+          <h2>同じ美容師だからわかる、「すすめにくさ」まで考えました。</h2>
+          <p>
+            CHIOMAは、髪とお客様に長く向き合ってきたサロンオーナーが、自分の店で先にお客様へ出したところから始まりました。物販を強くすすめるのではなく、施術中の会話から自然に紹介できること。ひとりで営むサロンでも続けやすいこと。その前提で、体験用サンプルと販売資料を用意しています。
+          </p>
+          <p class="quote">「毎日口にするものを、私は選ぶようになった。」</p>
+        </div>
+        <div class="data-grid" aria-label="CHIOMAの品質データ">
+          <div class="data-card">
+            <strong>Polyphenols</strong>
+            <span>629.9mg/kg</span>
+            <p>一般的なEVOOの2倍以上の含有量として説明しやすい数値です。</p>
+          </div>
+          <div class="data-card">
+            <strong>Oleocanthal</strong>
+            <span>212.9mg/kg</span>
+            <p>喉にくる辛みのもとになる成分です。</p>
+          </div>
+          <div class="data-card">
+            <strong>Oleacein</strong>
+            <span>210.4mg/kg</span>
+            <p>苦みや青みに関わる成分です。</p>
+          </div>
+          <div class="data-card">
+            <strong>Acidity</strong>
+            <span>0.22%</span>
+            <p>EVOO規格上限を大きく下回る酸度です。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" id="cycle">
+      <div class="steps-head wrap">
+        <div>
+          <p class="eyebrow">Order Cycle</p>
+          <h2>反応を見てから予約を集める。ひとりサロン向きの始め方。</h2>
+        </div>
+        <p>
+          いきなり在庫を抱えるのではなく、体験用サンプルで味を知ってもらい、予約を集めてから納品へ進めます。
+        </p>
+      </div>
+      <div class="cycle wrap">
+        <div class="cycle-item">
+          <small>i.</small>
+          <strong>味見</strong>
+          <p>オーナー自身が試し、お客様にも体験用パウチサンプルを渡します。</p>
+        </div>
+        <div class="cycle-item">
+          <small>ii.</small>
+          <strong>声かけ</strong>
+          <p>施術中や会計時に、無理のない言葉で予約希望を聞きます。</p>
+        </div>
+        <div class="cycle-item">
+          <small>iii.</small>
+          <strong>予約</strong>
+          <p>希望数を取りまとめて、必要な分だけ相談できます。</p>
+        </div>
+        <div class="cycle-item">
+          <small>iv.</small>
+          <strong>納品</strong>
+          <p>商品と販売スターターキットを受け取り、お客様へお渡しします。</p>
+        </div>
+      </div>
+      <div class="talk wrap" aria-label="お客様への声かけ例">
+        <div class="talk-item">
+          <strong>カウンセリング時</strong>
+          <p>「最近、朝にオリーブオイルを一口という習慣が増えているんです。これ、私も試していて。よかったら味を見てみてください。」</p>
+        </div>
+        <div class="talk-item">
+          <strong>店販棚の前で</strong>
+          <p>「南イタリアの単一農園から、年に一度だけ届くオリーブオイルです。まずは体験用パウチで味を試せます。」</p>
+        </div>
+        <div class="talk-item">
+          <strong>リピーターへ</strong>
+          <p>「前に試していただいたCHIOMA、気に入ってくださる方が多くて。続けるなら500mlボトルの方が使いやすいです。」</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap">
+        <div class="cta-inner">
+          <p class="eyebrow">Action</p>
+          <h2>まずは、メールでサンプルをご請求ください。</h2>
+          <p>
+            体験用パウチで味わいを確認いただいたうえで、マンツーマンサロンでの声かけ、予約の取り方、500mlボトルの扱い方までご案内します。
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="mailto:info@common-hairdesign.com?subject=CHIOMA%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E8%AB%8B%E6%B1%82">メールでサンプル請求する</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="logo">CHIOMA</div>
+      <p>Wholesale landing page for prospective partners.</p>
+    </div>
+  </footer>
+</body>
+</html>
