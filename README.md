@@ -19,12 +19,6 @@
 
 ## Microsoft Clarity
 
-Clarityの計測IDを取得したら、Clarity管理画面に表示される公式トラッキングコードを `index.html` の `<head>` 内に貼り付けてください。
+Microsoft Clarityのトラッキングコードは `index.html` の `<head>` 内に設定済みです。
 
-貼り付け位置はこのコメントの直後がわかりやすいです。
-
-```html
-<!-- Microsoft Clarity: paste the official tracking script here before publishing. See README.md. -->
-```
-
-`clarity.ms/tag/xxxxx` の `xxxxx` が計測IDです。
+計測ID: `xu0q6rodvx`
